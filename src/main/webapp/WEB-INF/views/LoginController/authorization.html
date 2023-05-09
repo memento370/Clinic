@@ -1,0 +1,24 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://thymelead.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>authorization</title>
+</head>
+<body>
+
+<form th:method="GET" th:action="@{/clinic/authorization/login}" th:object="${userLogin}">
+
+    <label for="login">Login :  </label>
+    <input type="text" th:field="*{login}" id="login">
+    <br>
+    <label for="pass">Pass :  </label>
+    <input type="text" th:field="*{pass}" id="pass">
+    <br>
+    <a></a>
+    <br/>
+    <input type="submit" value="Authorization"/>
+</form>
+<p th:text="${loginError}">If have login error</p>
+</body>
+</html>

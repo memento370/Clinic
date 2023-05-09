@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://thymelead.org" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/clinic}" th:object="${user}">
+
+    <label for="login">Login :  </label>
+    <input type="text" th:field="*{login}" id="login">
+    <br>
+    <label for="pass">Pass :  </label>
+    <input type="text" th:field="*{pass}" id="pass">
+    <br>
+    <label for="name">name :  </label>
+    <input type="text" th:field="*{name}" id="name">
+    <br>
+    <label for="surname">surname :  </label>
+    <input type="text" th:field="*{surname}" id="surname">
+    <br>
+    <label for="lastname">lastname :  </label>
+    <input type="text" th:field="*{lastname}" id="lastname">
+    <br>
+    <input type="submit" value="Registration"/>
+    <br>
+
+</form>
+<p th:text="${registerError}">If have register error</p>
+</body>
+</html>
